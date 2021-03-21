@@ -1,7 +1,7 @@
 /*
- * Classname             (wabot3.0)
+ * Classname             (wabot1)
  *
- * Version information   (3.0)
+ * Version information   (beta)
  *
  * Date                  (06/12,15:35)
  *
