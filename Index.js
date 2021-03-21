@@ -97,10 +97,10 @@ const { limit } = require('./database/menu/limit*/
 
 // Load Vcard Contact
 const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
-            + 'VERSION:3.0\n' 
+            + 'VERSION:BETA\n' 
             + 'FN:デニス\n' // full name
             + 'ORG:Owner Dns Bot;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=6285866295942:+62 858-6629-5942\n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=6285866295942:+\n' // WhatsApp ID + phone number
             + 'END:VCARD'
 prefix = '!'
 blocked = []
@@ -323,7 +323,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*`
+				teks = `Olá @${num.split('@')[0]}\nseja bem viado ao grupo *${mdata.subject}*`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -333,7 +333,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `tchau @${num.split('@')[0]} já foi tarde👋`
+				teks = `tchau @${num.split('@')[0]} saiu pq é gay👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -442,7 +442,7 @@ async function starts() {
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 LEVEL UP 」*\n\n➸ *Name*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nCongrats!! 🎉🎉`)
+                    await reply(`*「 subiu de level 」*\n\n➸ *nome*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nparabens!! 🎉🎉`)
                 }
             } catch (err) {
                 console.error(err)
@@ -578,7 +578,7 @@ async function starts() {
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[WARN]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
+						console.log(color('[WARN]','red'), 'Unregistered Command from ', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
