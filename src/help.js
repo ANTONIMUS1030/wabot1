@@ -182,7 +182,7 @@ const //database
 ║
 ║  NOME: ANTONIMUS
 ║  INSTA: OFF
-║  WPP: wa.me/+5592994604627
+║  WPP: wa.me//+5592994604627
 ║
 ║     Peita ou respeita 🐊🚩
 ║    kibadores, vão se fuder
